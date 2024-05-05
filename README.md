@@ -1,7 +1,7 @@
 ### 生成パターン: オブジェクトの生成方法に関するパターン
 - [x] Singleton
 - [ ] Factory Method
-- [ ] Abstract Factory
+- [x] Abstract Factory
 - [ ] Builder
 - [ ] Prototype
 
