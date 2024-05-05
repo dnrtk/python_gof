@@ -3,7 +3,7 @@
 - [ ] Factory Method
 - [x] Abstract Factory
 - [x] Builder
-- [ ] Prototype
+- [x] Prototype
 
 ### 構造パターン: オブジェクトの構成方法に関するパターン
 - [ ] Adapter
