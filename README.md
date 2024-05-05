@@ -2,7 +2,7 @@
 - [x] Singleton
 - [ ] Factory Method
 - [x] Abstract Factory
-- [ ] Builder
+- [x] Builder
 - [ ] Prototype
 
 ### 構造パターン: オブジェクトの構成方法に関するパターン
