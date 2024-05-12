@@ -6,7 +6,7 @@
 - [x] Prototype
 
 ### 構造パターン: オブジェクトの構成方法に関するパターン
-- [ ] Adapter
+- [x] Adapter
 - [ ] Bridge
 - [ ] Composite
 - [ ] Decorator
