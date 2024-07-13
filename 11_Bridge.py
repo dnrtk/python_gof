@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 # 抽象化部分
 class Shape(ABC):
     def __init__(self, renderer):
@@ -29,6 +30,7 @@ class VectorRenderer(Renderer):
     def render_square(self, width: int, height: int):
         print("Render square of width={} height={} as lines.".format(width, height))
 
+
 class RasterRenderer(Renderer):
     def render_circle(self, radius: int):
         print("Render circle of radius={} as pixcels.".format(radius))
@@ -44,6 +46,7 @@ class Circle(Shape):
 
     def draw(self):
         self.renderer.render_circle(self.radius)
+
 
 class Square(Shape):
     def __init__(self, renderer: Renderer, width: int, height: int):

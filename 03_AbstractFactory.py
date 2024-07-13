@@ -1,10 +1,12 @@
 from abc import ABC, abstractmethod
 
+
 # 抽象クラス
 class Button(ABC):
     @abstractmethod
     def click(self):
         pass
+
 
 class TextBox(ABC):
     @abstractmethod
@@ -14,6 +16,7 @@ class TextBox(ABC):
     @abstractmethod
     def set_text(self, text: str):
         pass
+
 
 class AbstractFactory(ABC):
     @abstractmethod
@@ -30,6 +33,7 @@ class WindowsButton(Button):
     def click(self):
         print("Windowsボタンがクリックされました")
 
+
 class MacButton(Button):
     def click(self):
         print("Macボタンがクリックされました")
@@ -44,6 +48,7 @@ class WindowsTextBox(TextBox):
 
     def set_text(self, text: str):
         self._text = "WindowsText: {}".format(text)
+
 
 class MacTextBox(TextBox):
     def __init__(self, text: str = ""):
@@ -83,6 +88,7 @@ def CreateInstance(factory: AbstractFactory):
     textbox.set_text("text message")
     print(textbox.get_text())
     print("")
+
 
 if __name__ == "__main__":
     factory = WindowsFactory()

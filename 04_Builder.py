@@ -8,6 +8,7 @@ class Meal:
     def __str__(self):
         return ", ".join(self._items)
 
+
 class MealBuilder:
     def __init__(self):
         self._meal = Meal()

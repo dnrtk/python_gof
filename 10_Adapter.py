@@ -7,11 +7,13 @@ class Customer:
     def show_customer_info(self):
         print("[id: {}] name: {}\temails: {}".format(self.id, self.name, self.email))
 
+
 def get_customer(id) -> Customer | None:
     for customer in customers:
         if customer.id == id:
             return customer
     return None
+
 
 customers = list()
 customers.append(Customer(1, "hitorime", "hitorime@example.com"))
@@ -21,6 +23,7 @@ customers.append(Customer(2, "hutarime", "hutarime@example.com"))
 class JsonAdapter:
     def __init__(self, json_str: str):
         import json
+
         self.customers = json.loads(json_str)
 
     def get_customer(self, id) -> Customer | None:
@@ -32,6 +35,7 @@ class JsonAdapter:
                     customer.get("email", ""),
                 )
         return None
+
 
 json_str = """
     [

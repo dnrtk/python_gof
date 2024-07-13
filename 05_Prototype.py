@@ -1,11 +1,13 @@
 import copy
 
+
 class Monster:
     def __init__(self, name: str, hp: int, attack: int, defense: int):
         self.name = name
         self.hp = hp
         self.attack = attack
         self.defense = defense
+
 
 class MonsterCatalog:
     def __init__(self):
@@ -14,7 +16,7 @@ class MonsterCatalog:
     def add_prototype(self, name: str, monster: Monster):
         self._prototypes[name] = monster
 
-    def create_monster(self, prototype_name: str, unique_name: str=None):
+    def create_monster(self, prototype_name: str, unique_name: str = None):
         if prototype_name not in self._prototypes:
             raise KeyError("Prototype '{}' not found".format(prototype_name))
 
@@ -23,16 +25,24 @@ class MonsterCatalog:
             monster.name = unique_name
         return monster
 
+
 class SlimePrototype(Monster):
     def __init__(self):
         super().__init__("スライム", 100, 20, 10)
+
 
 class GoblinPrototype(Monster):
     def __init__(self):
         super().__init__("ゴブリン", 80, 30, 15)
 
+
 def show_detail(monster: Monster):
-    print("{}\t(HP:{} / Attack:{} / Defense:{})".format(monster.name, monster.hp, monster.attack, monster.defense))
+    print(
+        "{}\t(HP:{} / Attack:{} / Defense:{})".format(
+            monster.name, monster.hp, monster.attack, monster.defense
+        )
+    )
+
 
 if __name__ == "__main__":
     # モンスターカタログ(プロトタイプ)作成
