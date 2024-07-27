@@ -1,3 +1,4 @@
+import copy
 class TeisyokuBaseClass:
     def __init__(self):
         self.main = ""
@@ -11,11 +12,7 @@ class TeisyokuBaseClass:
         print("")
 
     def clone(self):
-        teisyoku_base = TeisyokuBaseClass()
-        teisyoku_base.main = self.main
-        teisyoku_base.sub = self.sub
-        teisyoku_base.soup = self.soup
-        return teisyoku_base
+        return copy.deepcopy(self)
 
 teisyoku_base = TeisyokuBaseClass()
 
