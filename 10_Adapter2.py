@@ -1,9 +1,11 @@
 from abc import ABC, abstractmethod
 
+
 class DatabaseClass(ABC):
     @abstractmethod
     def get_data(self, name: str):
         pass
+
 
 class TeisyokuDatabaseClass:
     def __init__(self):
@@ -23,6 +25,7 @@ class TeisyokuDatabaseClass:
     def get_data(self, name: str):
         return self.data.get(name)
 
+
 class FoodDatabaseClass:
     def __init__(self):
         self.data = [
@@ -37,6 +40,7 @@ class FoodDatabaseClass:
     def get_all_data(self):
         return self.data
 
+
 class DatabaseAdapterClass(DatabaseClass):
     def __init__(self, fdc: FoodDatabaseClass):
         self.fdc = fdc
@@ -47,6 +51,7 @@ class DatabaseAdapterClass(DatabaseClass):
             if data.get("name") == name:
                 return data
         return None
+
 
 tdb = TeisyokuDatabaseClass()
 print(tdb.get_data("焼肉定食"))
