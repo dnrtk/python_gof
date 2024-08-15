@@ -12,7 +12,7 @@
 - [ ] Decorator
 - [x] Facade
 - [x] Flyweight
-- [ ] Proxy
+- [x] Proxy
 
 ### 振る舞いパターン: オブジェクト間の通信方法に関するパターン
 - [ ] Chain of Responsibility
