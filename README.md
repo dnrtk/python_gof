@@ -11,7 +11,7 @@
 - [ ] Composite
 - [ ] Decorator
 - [x] Facade
-- [ ] Flyweight
+- [x] Flyweight
 - [ ] Proxy
 
 ### 振る舞いパターン: オブジェクト間の通信方法に関するパターン
