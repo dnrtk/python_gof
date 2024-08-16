@@ -8,7 +8,7 @@
 ### 構造パターン: オブジェクトの構成方法に関するパターン
 - [x] Adapter
 - [x] Bridge
-- [ ] Composite
+- [x] Composite
 - [ ] Decorator
 - [x] Facade
 - [x] Flyweight
